@@ -1,0 +1,30 @@
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-xs-12">
+
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+      <h2>Mes articles :</h2>
+
+        <div class="form-group">
+          <li class="list-group-item">
+            <input type="number" id="article-list" class="form-control" name="articles" ngModel required>
+          </li>
+
+        <button  class="btn btn-primary" type="submit" [disabled]="f.invalid">Valider</button>
+      </div>
+
+
+      </form>
+      <h2>Mes boites :</h2>
+
+      <button class="btn btn-success"  (click)="onValidatee()" name="boites" >Récupérer résultat</button>
+      <h4>boites : {{boites}} </h4>
+
+    </div>
+
+  </div>
+
+</div>
